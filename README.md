@@ -78,8 +78,8 @@ flowchart TD
 
     A --> H[Rendering / GUI]
 
-Class Relationship Diagram (Simplified)
-classDiagram
+- Class Relationship Diagram (Simplified)
+classDiagram{
     class Vehicle {
         +update()
         +move()
@@ -105,6 +105,7 @@ classDiagram
     Vehicle <|-- VehicleDecorator
     VehicleDecorator <|-- TransparentDecorator
     Vehicle --> EmissionsObserver
+    
 
 ## 👤 My Contributions
 
