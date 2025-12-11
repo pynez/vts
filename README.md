@@ -66,6 +66,7 @@ The simulator updates in real time, rendering vehicles on a map and displaying r
 ### 🧩 System Architecture
 
 - High-Level Component Diagram
+```
 flowchart TD
     A[Simulation Engine] --> B[Vehicle System]
     A --> C[Route Manager]
@@ -77,8 +78,10 @@ flowchart TD
     C --> G[Route Configurations]
 
     A --> H[Rendering / GUI]
-
+```
 - Class Relationship Diagram (Simplified)
+
+```
 classDiagram{
     class Vehicle {
         +update()
@@ -106,7 +109,7 @@ classDiagram{
     VehicleDecorator <|-- TransparentDecorator
     Vehicle --> EmissionsObserver
     
-
+```
 ## 👤 My Contributions
 
 - I played a key role in designing and implementing several core systems within VTS. My primary responsibilities included:
