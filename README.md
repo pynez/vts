@@ -1,11 +1,13 @@
-🚍 VTS — Vehicle Transit Simulator
+# 🚍 VTS — Vehicle Transit Simulator
 
-A large-scale object-oriented simulation project built for CSCI 3081W (Program Design & Development)
+*A large-scale object-oriented simulation project built for CSCI 3081W (Program Design & Development)
 
-Note: This repository contains documentation, system design, and media related to VTS.
-The source code cannot be published due to course policy, but this README provides a complete overview of the project’s architecture and my individual contributions.
+> **Note:** This repository contains documentation, system design, and media related to VTS.
+> The source code cannot be published due to course policy, but this README provides a complete overview of the project’s architecture and my individual contributions.
 
-📌 Overview
+---
+
+## 📌 Overview
 
 VTS (Vehicle Transit Simulator) is a modular transit simulation engine designed to model buses, trains, routes, passengers, and emissions across a virtual city.
 The system emphasizes clean architecture, extensibility, and object-oriented design, using real-world design patterns such as:
@@ -20,47 +22,50 @@ Strategy (for controlling passenger generation behavior)
 
 The simulator updates in real time, rendering vehicles on a map and displaying route progress, passenger counts, and environmental impact.
 
-🧱 Core Features
-🚍 Vehicle Simulation
+---
 
-Bus and train models with independent movement, update loops, and route logic
+## 🧱 Core Features
+### 🚍 Vehicle Simulation
 
-Dynamic passenger loading/unloading
+- Bus and train models with independent movement, update loops, and route logic
 
-Configurable speeds, capacities, and routes
+- Dynamic passenger loading/unloading
 
-🌿 CO₂ Emissions Tracking
+- Configurable speeds, capacities, and routes
 
-Real-time emissions reporting using an Observer pattern
+### 🌿 CO₂ Emissions Tracking
 
-Dashboard displaying cumulative emissions across all vehicles
+- Real-time emissions reporting using an Observer pattern
 
-Extensible design for adding additional environmental metrics
+- Dashboard displaying cumulative emissions across all vehicles
 
-🎨 Decorator System
+- Extensible design for adding additional environmental metrics
 
-Used to enhance or alter vehicle rendering logic
+### 🎨 Decorator System
 
-Example: TransparentDecorator, which dynamically adjusts alpha values
+- Used to enhance or alter vehicle rendering logic
 
-Allows adding features without modifying the base Vehicle class
+-Example: TransparentDecorator, which dynamically adjusts alpha values
 
-🗺 Interactive GUI
+- Allows adding features without modifying the base Vehicle class
 
-Map-based visualization of routes and vehicle positions
+### 🗺 Interactive GUI
 
-Real-time simulation playback
+- Map-based visualization of routes and vehicle positions
 
-Toggleable overlays (emissions, passenger data, etc.)
+- Real-time simulation playback
 
-🧪 Testing & Reliability
+- Toggleable overlays (emissions, passenger data, etc.)
 
-Comprehensive unit tests for vehicle behaviors, decorators, observers, and configuration parsing
+### 🧪 Testing & Reliability
 
-Integration tests for the simulation update loop
+- Comprehensive unit tests for vehicle behaviors, decorators, observers, and configuration parsing
 
-🧩 System Architecture
-High-Level Component Diagram
+- Integration tests for the simulation update loop
+
+### 🧩 System Architecture
+
+- High-Level Component Diagram
 flowchart TD
     A[Simulation Engine] --> B[Vehicle System]
     A --> C[Route Manager]
@@ -101,47 +106,47 @@ classDiagram
     VehicleDecorator <|-- TransparentDecorator
     Vehicle --> EmissionsObserver
 
-👤 My Contributions
+## 👤 My Contributions
 
-I played a key role in designing and implementing several core systems within VTS. My primary responsibilities included:
+- I played a key role in designing and implementing several core systems within VTS. My primary responsibilities included:
 
-🧩 Decorator System
+### 🧩 Decorator System
 
-Implemented the Vehicle Decorator pattern, including the TransparentDecorator
+- Implemented the Vehicle Decorator pattern, including the TransparentDecorator
 
-Ensured decorators could modify rendering logic without altering base classes
+- Ensured decorators could modify rendering logic without altering base classes
 
-Added tests to guarantee decorator chain correctness
+- Added tests to guarantee decorator chain correctness
 
-🌿 Emissions Tracking
+### 🌿 Emissions Tracking
 
-Built the CO₂ calculation system and integrated it with the simulation loop
+- Built the CO₂ calculation system and integrated it with the simulation loop
 
-Implemented an Observer that listens to vehicle updates and logs emissions
+- Implemented an Observer that listens to vehicle updates and logs emissions
 
-Designed the data pipeline for exporting emissions results to the GUI
+- Designed the data pipeline for exporting emissions results to the GUI
 
-🚂 Vehicle Behaviors
+### 🚂 Vehicle Behaviors
 
-Developed movement and update logic for vehicles on complex routes
+- Developed movement and update logic for vehicles on complex routes
 
-Implemented constraints such as dwell times, stop detection, and capacity rules
+- Implemented constraints such as dwell times, stop detection, and capacity rules
 
-🧪 Testing & Debugging
+### 🧪 Testing & Debugging
 
-Wrote unit tests for vehicle updates, decorators, and observer interactions
+- Wrote unit tests for vehicle updates, decorators, and observer interactions
 
-Debugged rendering synchronization issues during multi-vehicle updates
+- Debugged rendering synchronization issues during multi-vehicle updates
 
-📐 Documentation
+### 📐 Documentation
 
-Authored UML diagrams and internal design documents
+- Authored UML diagrams and internal design documents
 
-Helped formalize the architectural decomposition used by the entire project team
+- Helped formalize the architectural decomposition used by the entire project team
 
-📸 Media
+### 📸 Media
 
-Since code cannot be shared, here are visual examples of the project:
+- Since code cannot be shared, here are visual examples of the project:
 
 ✔️ Simulation screenshots (routes, vehicles, UI overlays)
 
@@ -151,23 +156,23 @@ Since code cannot be shared, here are visual examples of the project:
 
 ✔️ Example of a transparent decorator applied
 
-(Place your media in a /media folder and link it here once ready.)
+- They can all be found on [pyne.dev](https://pyne.dev)
 
-🛠 Tech Stack
+### 🛠 Tech Stack
 
-Language: C++
+- Language: Java, JavaScript
 
-Build System: Bazel
+- Build System: Gradle
 
-Patterns Used: Decorator, Observer, Factory, Strategy
+- Patterns Used: Decorator, Observer, Factory, Strategy
 
-Testing: GoogleTest
+- Testing: GoogleTest
 
-Visualization: Provided simulation/graphics framework + custom rendering hooks
+- Visualization: Provided simulation/graphics framework + custom rendering hooks
 
-📚 What I Learned
+### 📚 What I Learned
 
-Through VTS, I strengthened my skills in:
+- Through VTS, I strengthened my skills in:
 
 Object-oriented design & architecture
 
@@ -181,13 +186,13 @@ Collaborating in a multi-developer environment
 
 Writing maintainable tests in large systems
 
-🚫 Source Code Disclaimer
+### 🚫 Source Code Disclaimer
 
-This project was completed as part of the CSCI 3081W: Program Design & Development course at the University of Minnesota.
+- This project was completed as part of the CSCI 3081W: Program Design & Development course at the University of Minnesota.
 Course policy prohibits publicly sharing source code.
 This repository contains only documentation, diagrams, and media relevant to my personal portfolio.
 
-🔗 Portfolio
+### 🔗 Portfolio
 
-You can view the accompanying project write-up on my portfolio here:
+- You can view the accompanying project write-up on my portfolio here:
 https://pyne.dev/
